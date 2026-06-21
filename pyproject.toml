@@ -9,10 +9,28 @@ description = "Barricator production-grade Python Server SDK (local evaluation, 
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "Apache-2.0" }
+authors = [{ name = "Jorge Spiropulo" }]
+keywords = ["feature-flags", "barricator", "sdk", "rollout", "ab-testing"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Libraries",
+]
 dependencies = []  # standard library only (urllib, threading, asyncio)
 
+[project.urls]
+Homepage = "https://github.com/barricator/barricator-python-client"
+Source = "https://github.com/barricator/barricator-python-client"
+Changelog = "https://github.com/barricator/barricator-python-client/blob/main/CHANGELOG.md"
+
 [project.optional-dependencies]
-dev = ["pytest>=7"]
+dev = ["pytest>=7", "build>=1.2"]
 
 [tool.setuptools.packages.find]
 include = ["barricator*"]

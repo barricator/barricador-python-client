@@ -1,7 +1,15 @@
 # barricator-python-client
 
+[![PyPI](https://img.shields.io/pypi/v/barricator-client?label=PyPI)](https://pypi.org/project/barricator-client/)
+
 Production-grade **Python Server SDK** for Barricator. Standard library only (no third-party runtime
 deps), Python 3.9+.
+
+## Install
+
+```bash
+pip install barricator-client
+```
 
 ## Guarantees
 
