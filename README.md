@@ -26,7 +26,7 @@ pip install barricator-client
 ```python
 from barricator import BarricatorClient, UserContext
 
-with BarricatorClient("sdk-srv-...", base_url="https://app.barricator.io") as client:
+with BarricatorClient("sdk-srv-...", base_url="https://app.barricator.com") as client:
     user = UserContext("user-123", email="user@enterprise.com", custom={"plan": "pro"})
     if client.is_enabled("premium-pricing", user):
         ...

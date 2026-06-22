@@ -27,7 +27,7 @@ class BarricatorClient:
     def __init__(
         self,
         sdk_key: str,
-        base_url: str = "https://app.barricator.io",
+        base_url: str = "https://app.barricator.com",
         *,
         streaming_enabled: bool = True,
         metrics_enabled: bool = True,

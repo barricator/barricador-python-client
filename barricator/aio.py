@@ -26,7 +26,7 @@ class AsyncBarricatorClient:
     def __init__(
         self,
         sdk_key: str,
-        base_url: str = "https://app.barricator.io",
+        base_url: str = "https://app.barricator.com",
         *,
         streaming_enabled: bool = True,
         metrics_enabled: bool = True,
@@ -53,7 +53,7 @@ class AsyncBarricatorClient:
         self._flush_task: Optional[asyncio.Task] = None
 
     @classmethod
-    async def create(cls, sdk_key: str, base_url: str = "https://app.barricator.io", **kwargs: Any) -> "AsyncBarricatorClient":
+    async def create(cls, sdk_key: str, base_url: str = "https://app.barricator.com", **kwargs: Any) -> "AsyncBarricatorClient":
         client = cls(sdk_key, base_url, **kwargs)
         await client.start()
         return client
