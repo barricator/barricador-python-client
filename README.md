@@ -1,14 +1,14 @@
-# barricator-python-client
+# barricador-python-client
 
-[![PyPI](https://img.shields.io/pypi/v/barricator-client?label=PyPI)](https://pypi.org/project/barricator-client/)
+[![PyPI](https://img.shields.io/pypi/v/barricador-client?label=PyPI)](https://pypi.org/project/barricador-client/)
 
-Production-grade **Python Server SDK** for Barricator. Standard library only (no third-party runtime
+Production-grade **Python Server SDK** for Barricador. Standard library only (no third-party runtime
 deps), Python 3.9+.
 
 ## Install
 
 ```bash
-pip install barricator-client
+pip install barricador-client
 ```
 
 ## Guarantees
@@ -19,14 +19,14 @@ pip install barricator-client
 - **Real-time sync** over SSE on a daemon thread, with exponential backoff + jitter on disconnect and
   graceful fallback to cached state.
 - **Async telemetry** flushed every 30s; never blocks the host application.
-- **Two tracks:** synchronous `BarricatorClient` and asyncio-native `AsyncBarricatorClient`.
+- **Two tracks:** synchronous `BarricadorClient` and asyncio-native `AsyncBarricadorClient`.
 
 ## Sync usage
 
 ```python
-from barricator import BarricatorClient, UserContext
+from barricador import BarricadorClient, UserContext
 
-with BarricatorClient("sdk-srv-...", base_url="https://app.barricator.com") as client:
+with BarricadorClient("sdk-srv-...", base_url="https://app.barricador.com") as client:
     user = UserContext("user-123", email="user@enterprise.com", custom={"plan": "pro"})
     if client.is_enabled("premium-pricing", user):
         ...
@@ -36,9 +36,9 @@ with BarricatorClient("sdk-srv-...", base_url="https://app.barricator.com") as c
 ## Async usage
 
 ```python
-from barricator import AsyncBarricatorClient, UserContext
+from barricador import AsyncBarricadorClient, UserContext
 
-async with await AsyncBarricatorClient.create("sdk-srv-...") as client:
+async with await AsyncBarricadorClient.create("sdk-srv-...") as client:
     user = UserContext("user-123", country="US")
     enabled = client.is_enabled("beta-feature", user)   # evaluation is sync (in-memory)
 ```
@@ -53,9 +53,9 @@ python3 -m unittest discover -s tests -v
 
 | Module | Responsibility |
 |--------|----------------|
-| `barricator.client` / `barricator.aio` | Sync / async clients |
-| `barricator.evaluation` | Local targeting engine |
-| `barricator.store` | Thread-safe `FlagStore` + `MetricsBuffer` |
-| `barricator.transport` | urllib bootstrap/flush + SSE parsing |
-| `barricator.murmur` | MurmurHash3 (cross-SDK consistent) |
-| `barricator.context` | `UserContext` |
+| `barricador.client` / `barricador.aio` | Sync / async clients |
+| `barricador.evaluation` | Local targeting engine |
+| `barricador.store` | Thread-safe `FlagStore` + `MetricsBuffer` |
+| `barricador.transport` | urllib bootstrap/flush + SSE parsing |
+| `barricador.murmur` | MurmurHash3 (cross-SDK consistent) |
+| `barricador.context` | `UserContext` |

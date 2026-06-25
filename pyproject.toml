@@ -3,14 +3,14 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "barricator-client"
+name = "barricador-client"
 version = "0.1.1"
-description = "Barricator production-grade Python Server SDK (local evaluation, SSE sync, telemetry)"
+description = "Barricador production-grade Python Server SDK (local evaluation, SSE sync, telemetry)"
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "Apache-2.0" }
 authors = [{ name = "Jorge Spiropulo" }]
-keywords = ["feature-flags", "barricator", "sdk", "rollout", "ab-testing"]
+keywords = ["feature-flags", "barricador", "sdk", "rollout", "ab-testing"]
 classifiers = [
   "Development Status :: 4 - Beta",
   "Intended Audience :: Developers",
@@ -25,12 +25,12 @@ classifiers = [
 dependencies = []  # standard library only (urllib, threading, asyncio)
 
 [project.urls]
-Homepage = "https://github.com/barricator/barricator-python-client"
-Source = "https://github.com/barricator/barricator-python-client"
-Changelog = "https://github.com/barricator/barricator-python-client/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/barricador/barricador-python-client"
+Source = "https://github.com/barricador/barricador-python-client"
+Changelog = "https://github.com/barricador/barricador-python-client/blob/main/CHANGELOG.md"
 
 [project.optional-dependencies]
 dev = ["pytest>=7", "build>=1.2"]
 
 [tool.setuptools.packages.find]
-include = ["barricator*"]
+include = ["barricador*"]

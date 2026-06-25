@@ -2,7 +2,7 @@ name: Release
 
 # Publishes the Python SDK to PyPI when a version tag is pushed (e.g. v1.0.0).
 # Uses PyPI Trusted Publishing (OIDC) — no API token to store. Configure the trusted publisher at
-# https://pypi.org/manage/project/barricator-client/settings/publishing/ pointing at this repo +
+# https://pypi.org/manage/project/barricador-client/settings/publishing/ pointing at this repo +
 # workflow + the "pypi" environment below.
 on:
   push:

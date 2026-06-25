@@ -1,8 +1,8 @@
 import unittest
 
-from barricator import UserContext
-from barricator import evaluation
-from barricator.murmur import bucket_0_to_99, bucket_100k
+from barricador import UserContext
+from barricador import evaluation
+from barricador.murmur import bucket_0_to_99, bucket_100k
 
 
 def _flag(**kwargs):
