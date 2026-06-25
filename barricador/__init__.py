@@ -8,4 +8,4 @@ from .client import BarricadorClient
 from .context import UserContext
 
 __all__ = ["BarricadorClient", "AsyncBarricadorClient", "UserContext"]
-__version__ = "0.1.1"
+__version__ = "0.2.0"
